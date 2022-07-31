@@ -2,8 +2,14 @@ using FC.Codeflix.Catalog.Domain.Entity;
 
 namespace FC.Codeflix.Catalog.UnitTests.Domain.Entity;
 
+[Collection(nameof(CategoryTestFixture))]
 public class CategoryTest
 {
+    private readonly CategoryTestFixture _categoryTestFixture;
+
+    public CategoryTest(CategoryTestFixture categoryTestFixture) 
+        => _categoryTestFixture = categoryTestFixture;
+
     [Fact(DisplayName = nameof(Instantiate))]
     [Trait("Domain", "Category - Aggregate")]
     public void Instantiate()
@@ -64,13 +70,7 @@ public class CategoryTest
     [Trait("Domain", "Category - Aggregate")]
     public void Activate()
     {
-        var validData = new
-        {
-            Name = "some category name",
-            Description = "some description",
-            IsActive = false
-        };
-        var category = new Category(validData.Name, validData.Description, validData.IsActive);
+        var category = _categoryTestFixture.NewDeactivatedCategory();
         var updatedAtBeforeActivate = category.UpdatedAt;
         
         category.Activate();
@@ -83,13 +83,7 @@ public class CategoryTest
     [Trait("Domain", "Category - Aggregate")]
     public void Deactivate()
     {
-        var validData = new
-        {
-            Name = "some category name",
-            Description = "some description",
-            IsActive = true
-        };
-        var category = new Category(validData.Name, validData.Description, validData.IsActive);
+        var category = _categoryTestFixture.NewActiveCategory();
         var updatedAtBeforeActivate = category.UpdatedAt;
         
         category.Deactivate();
@@ -102,7 +96,7 @@ public class CategoryTest
     [Trait("Domain", "Category - Aggregate")]
     public void UpdateValues()
     {
-        var category = new Category("some name", "some description");
+        var category = _categoryTestFixture.NewCategory();
         var updatedData = new
         {
             Name = "name updated",
@@ -121,7 +115,7 @@ public class CategoryTest
     [Trait("Domain", "Category - Aggregate")]
     public void UpdateNameOnly()
     {
-        var category = new Category("some name", "some description");
+        var category = _categoryTestFixture.NewCategory();
         var currentDescription = category.Description;
         var newName = "updated name";
         var updatedAtBeforeActivate = category.UpdatedAt;

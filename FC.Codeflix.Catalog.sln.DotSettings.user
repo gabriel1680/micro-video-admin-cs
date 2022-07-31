@@ -14,5 +14,6 @@
     &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Validator.CategoryValidatorTest.ShouldThrowError_WhenInstantiate_GivenAEmptyOrNullName&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Validator.CategoryValidatorTest.UpdateValuesErrorWhenNameIsEmpty&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Validator.CategoryValidatorTest.UpdateValuesErrorWhenDescriptionIsNull&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Validator.CategoryValidatorTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
