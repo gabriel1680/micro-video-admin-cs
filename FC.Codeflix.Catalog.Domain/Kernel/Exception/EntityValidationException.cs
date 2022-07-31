@@ -1,6 +1,8 @@
 namespace FC.Codeflix.Catalog.Domain.Kernel.Exception;
 
-public class EntityValidationException : System.Exception
+using System;
+
+public class EntityValidationException : Exception
 {
     public EntityValidationException(string? message) : base(message)
     {
