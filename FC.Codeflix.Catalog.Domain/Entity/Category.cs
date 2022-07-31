@@ -1,4 +1,5 @@
 using FC.Codeflix.Catalog.Domain.Kernel;
+using FC.Codeflix.Catalog.Domain.Kernel.Exception;
 
 namespace FC.Codeflix.Catalog.Domain.Entity;
 
@@ -45,10 +46,20 @@ public class Category : BaseEntity
         Update();
     }
 
+    public void UpdateValues(string name, string? description = null)
+    {
+        Name = name;
+        Description = description ?? Description;
+        Validate();
+        Update();
+    }
+
     private void Validate()
     {
-        if (string.IsNullOrEmpty(Name)) throw new ArgumentNullException(nameof(Name));
+        if (string.IsNullOrWhiteSpace(Name)) 
+            throw new EntityValidationException($"O campo {nameof(Name)} não pode ser vazio");
         
-        if (string.IsNullOrEmpty(Description)) throw new ArgumentNullException(nameof(Description));
+        if (string.IsNullOrEmpty(Description)) 
+            throw new EntityValidationException($"O campo {nameof(Description)} não pode ser vazio");
     }
 }

@@ -70,12 +70,66 @@ public class CategoryTest
             Description = "some description",
             IsActive = false
         };
-        var category = new Category(validData.Name, validData.Description);
+        var category = new Category(validData.Name, validData.Description, validData.IsActive);
         var updatedAtBeforeActivate = category.UpdatedAt;
         
         category.Activate();
         
         Assert.True(category.IsActive);
+        Assert.True(category.UpdatedAt > updatedAtBeforeActivate);
+    }
+    
+    [Fact(DisplayName = nameof(Deactivate))]
+    [Trait("Domain", "Category - Aggregate")]
+    public void Deactivate()
+    {
+        var validData = new
+        {
+            Name = "some category name",
+            Description = "some description",
+            IsActive = true
+        };
+        var category = new Category(validData.Name, validData.Description, validData.IsActive);
+        var updatedAtBeforeActivate = category.UpdatedAt;
+        
+        category.Deactivate();
+        
+        Assert.False(category.IsActive);
+        Assert.True(category.UpdatedAt > updatedAtBeforeActivate);
+    }
+    
+    [Fact(DisplayName = nameof(UpdateValues))]
+    [Trait("Domain", "Category - Aggregate")]
+    public void UpdateValues()
+    {
+        var category = new Category("some name", "some description");
+        var updatedData = new
+        {
+            Name = "name updated",
+            Description = "description updated",
+        };
+        var updatedAtBeforeActivate = category.UpdatedAt;
+        
+        category.UpdateValues(updatedData.Name, updatedData.Description);
+        
+        Assert.Equal(category.Name, updatedData.Name);
+        Assert.Equal(category.Description, updatedData.Description);
+        Assert.True(category.UpdatedAt > updatedAtBeforeActivate);
+    }
+    
+    [Fact(DisplayName = nameof(UpdateNameOnly))]
+    [Trait("Domain", "Category - Aggregate")]
+    public void UpdateNameOnly()
+    {
+        var category = new Category("some name", "some description");
+        var currentDescription = category.Description;
+        var newName = "updated name";
+        var updatedAtBeforeActivate = category.UpdatedAt;
+        
+        category.UpdateValues(newName);
+        
+        Assert.Equal(category.Name, newName);
+        Assert.Equal(category.Description, currentDescription);
         Assert.True(category.UpdatedAt > updatedAtBeforeActivate);
     }
 }
