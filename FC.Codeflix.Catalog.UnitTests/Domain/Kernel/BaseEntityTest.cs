@@ -22,9 +22,9 @@ public class BaseEntityTest
         Assert.IsType<DateTime>(entity.UpdatedAt);
     }
     
-    [Fact(DisplayName = nameof(Instantiate_With_Params))]
+    [Fact(DisplayName = nameof(InstantiateWithParams))]
     [Trait("Domain", "Kernel")]
-    public void Instantiate_With_Params()
+    public void InstantiateWithParams()
     {
         var data = new
         {

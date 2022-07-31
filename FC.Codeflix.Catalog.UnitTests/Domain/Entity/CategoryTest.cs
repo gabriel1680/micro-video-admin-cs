@@ -28,11 +28,11 @@ public class CategoryTest
         Assert.True(category.IsActive);
     }
     
-    [Theory(DisplayName = nameof(Instantiate_With_IsActive))]
+    [Theory(DisplayName = nameof(InstantiateWithIsActive))]
     [Trait("Domain", "Category - Aggregate")]
     [InlineData(true)]
     [InlineData(false)]
-    public void Instantiate_With_IsActive(bool isActive)
+    public void InstantiateWithIsActive(bool isActive)
     {
         var validData = new
         {
@@ -49,9 +49,9 @@ public class CategoryTest
         Assert.Equal(category.IsActive, isActive);
     }
     
-    [Fact(DisplayName = nameof(Inheritance_from_BaseEntity))]
+    [Fact(DisplayName = nameof(InheritanceFromBaseEntity))]
     [Trait("Domain", "Category - Aggregate")]
-    public void Inheritance_from_BaseEntity()
+    public void InheritanceFromBaseEntity()
     {
         var validData = new
         {
@@ -64,6 +64,35 @@ public class CategoryTest
         Assert.IsType<Guid>(category.Id);
         Assert.IsType<DateTime>(category.CreatedAt);
         Assert.IsType<DateTime>(category.UpdatedAt);
+    }
+    
+    [Fact(DisplayName = nameof(InstantiateWithBaseEntityData))]
+    [Trait("Domain", "Category - Aggregate")]
+    public void InstantiateWithBaseEntityData()
+    {
+        var validData = new
+        {
+            Id = Guid.NewGuid(),
+            Name = "some category name",
+            Description = "some description",
+            CreatedAt = DateTime.Now,
+            UpdatedAt = DateTime.Now,
+        };
+
+        var category = new Category(
+            validData.Id,
+            validData.CreatedAt,
+            validData.UpdatedAt,
+            validData.Name, 
+            validData.Description
+        );
+        
+        Assert.Equal(validData.Id, category.Id);
+        Assert.Equal(validData.CreatedAt, category.CreatedAt);
+        Assert.Equal(validData.UpdatedAt, category.UpdatedAt);
+        Assert.Equal(validData.Name, category.Name);
+        Assert.Equal(validData.Description, category.Description);
+        Assert.True(category.IsActive);
     }
     
     [Fact(DisplayName = nameof(Activate))]

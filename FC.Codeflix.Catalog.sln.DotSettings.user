@@ -1,19 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/ActualSeverity/@EntryValue">INFO</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0867334f_002D5405_002D47c7_002Da6b8_002D72e80bf325d4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CategoryTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Entity.CategoryTest&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Kernel.Exception.EntityValidationExceptionTest&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Validator.CategoryValidatorTest.ShouldThrowError_WhenInstantiate_GivenAEmptyOrNullName&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/gabriellopes/Library/Caches/JetBrains/Rider2022.1/resharper-host/temp/Rider/vAny/CoverageData/_FC.Codeflix.Catalog.-135985027/Snapshot/snapshot.utdcvr</s:String>
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7583f5e5_002Dde15_002D48a3_002D9a81_002D0d10ad7e9d6d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CategoryTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Entity.CategoryTest&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Kernel.BaseEntityTest&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Validator.CategoryValidatorTest.ShouldThrowError_WhenInstantiate_GivenAEmptyOrNullName&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Validator.CategoryValidatorTest.UpdateValuesErrorWhenNameIsEmpty&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Validator.CategoryValidatorTest.UpdateValuesErrorWhenDescriptionIsNull&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Domain.Validator.CategoryValidatorTest&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
