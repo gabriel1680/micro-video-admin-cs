@@ -1,6 +1,7 @@
 namespace FC.Codeflix.Catalog.Domain.Kernel.Repository;
 
-public class IUpdateRepository
+public interface IUpdateRepository<E> where E : IEntity
 {
-    
+    Task Update(E entity);
+    Task Update(E entity, CancellationToken cancellationToken);
 }

@@ -1,19 +1,21 @@
+using FC.Codeflix.Catalog.Domain.Kernel.ValueObject;
+
 namespace FC.Codeflix.Catalog.Domain.Kernel;
 
 public abstract class BaseEntity : IEntity
 {
-    public Guid Id { get; }
+    public UniqueEntityId Id { get; }
     public DateTime CreatedAt { get; }
     public DateTime UpdatedAt { get; private set; }
 
     protected BaseEntity()
     {
-        Id = Guid.NewGuid();
+        Id = new UniqueEntityId();
         CreatedAt = DateTime.Now;
         UpdatedAt = DateTime.Now;
     }
 
-    protected BaseEntity(Guid id, DateTime createdAt, DateTime updatedAt)
+    protected BaseEntity(UniqueEntityId id, DateTime createdAt, DateTime updatedAt)
     {
         Id = id;
         CreatedAt = createdAt;

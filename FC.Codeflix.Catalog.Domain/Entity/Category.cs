@@ -1,5 +1,6 @@
 using FC.Codeflix.Catalog.Domain.Kernel;
 using FC.Codeflix.Catalog.Domain.Kernel.Exception;
+using FC.Codeflix.Catalog.Domain.Kernel.ValueObject;
 
 namespace FC.Codeflix.Catalog.Domain.Entity;
 
@@ -19,7 +20,7 @@ public class Category : BaseEntity
     }
 
     public Category(
-        Guid id, 
+        UniqueEntityId id, 
         DateTime createdAt, 
         DateTime updatedAt, 
         string name,
