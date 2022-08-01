@@ -2,6 +2,11 @@
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/ActualSeverity/@EntryValue">INFO</s:String>
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/gabriellopes/Library/Caches/JetBrains/Rider2022.1/resharper-host/temp/Rider/vAny/CoverageData/_FC.Codeflix.Catalog.-135985027/Snapshot/snapshot.utdcvr</s:String>
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7583f5e5_002Dde15_002D48a3_002D9a81_002D0d10ad7e9d6d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CategoryTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7583f5e5_002Dde15_002D48a3_002D9a81_002D0d10ad7e9d6d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CategoryTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ac2b41d0_002D302c_002D4564_002D8246_002D1fe4dc4a2eb3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ExecuteThrowsError" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::6A71CBA2-4BD9-4A8D-8814-2A377F81189E::net6.0::FC.Codeflix.Catalog.UnitTests.Application.UseCase.CreateCategory.CreateCategoryUseCaseTest.ExecuteThrowsError&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -2,6 +2,7 @@ using FC.CodeFlix.Catalog.Application;
 using FC.CodeFlix.Catalog.Application.UseCase.Category.Create;
 using FC.CodeFlix.Catalog.Application.UseCase.Category.Create.DTO;
 using FC.Codeflix.Catalog.Domain.Entity;
+using FC.Codeflix.Catalog.Domain.Kernel.Exception;
 using FC.Codeflix.Catalog.Domain.Kernel.Repository;
 
 using Moq;
@@ -36,5 +37,18 @@ public class CreateCategoryUseCaseTest
             ), 
             Times.Once
         );
+    }
+    
+    [Fact(DisplayName = nameof(ExecuteThrowError))]
+    [Trait("Application", "CreateCategory - Use Case")] 
+    public async void ExecuteThrowError()
+    {
+        var repository = new Mock<ICreateRepository<Category>>();
+        var unitOfWork = new Mock<IUnitOfWork>();
+        var useCase = new CreateCategoryUseCase(repository.Object, unitOfWork.Object);
+        var input = new CreateCategoryInput(null!, "A Description");
+
+        var actual = async () => await useCase.Execute(input, CancellationToken.None);
+        await Assert.ThrowsAsync<EntityValidationException>(actual);
     }
 }
