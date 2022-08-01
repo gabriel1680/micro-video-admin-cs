@@ -1,4 +1,5 @@
 using FC.Codeflix.Catalog.Domain.Entity;
+using FC.Codeflix.Catalog.Domain.Kernel.ValueObject;
 
 namespace FC.Codeflix.Catalog.UnitTests.Domain.Entity;
 
@@ -61,7 +62,7 @@ public class CategoryTest
 
         var category = new Category(validData.Name, validData.Description);
         
-        Assert.IsType<Guid>(category.Id);
+        Assert.IsType<UniqueEntityId>(category.Id);
         Assert.IsType<DateTime>(category.CreatedAt);
         Assert.IsType<DateTime>(category.UpdatedAt);
     }
@@ -72,7 +73,7 @@ public class CategoryTest
     {
         var validData = new
         {
-            Id = Guid.NewGuid(),
+            Id = new UniqueEntityId(),
             Name = "some category name",
             Description = "some description",
             CreatedAt = DateTime.Now,
