@@ -1,4 +1,4 @@
-namespace FC.CodeFlix.Catalog.Application.UseCase;
+namespace FC.CodeFlix.Catalog.Application.Kernel.UseCase;
 
 public interface IGenericUseCase<I, O>
 {

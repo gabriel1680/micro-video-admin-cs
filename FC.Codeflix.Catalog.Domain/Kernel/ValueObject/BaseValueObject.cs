@@ -2,7 +2,7 @@ namespace FC.Codeflix.Catalog.Domain.Kernel.ValueObject;
 
 public abstract class BaseValueObject<T>
 {
-    protected T Value;
+    public T Value;
 
     public BaseValueObject(T value)
     {
