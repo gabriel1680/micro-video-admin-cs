@@ -1,3 +1,5 @@
+using FC.Codeflix.Catalog.Domain.Kernel.Entity;
+
 namespace FC.Codeflix.Catalog.Domain.Kernel.Repository;
 
 public interface ICreateRepository<E> where E : IEntity

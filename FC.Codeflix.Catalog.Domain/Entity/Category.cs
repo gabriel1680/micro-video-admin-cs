@@ -1,4 +1,4 @@
-using FC.Codeflix.Catalog.Domain.Kernel;
+using FC.Codeflix.Catalog.Domain.Kernel.Entity;
 using FC.Codeflix.Catalog.Domain.Kernel.Exception;
 using FC.Codeflix.Catalog.Domain.Kernel.ValueObject;
 

@@ -1,5 +1,4 @@
 using FC.Codeflix.Catalog.Domain.Entity;
-using FC.Codeflix.Catalog.Domain.Kernel.Exception;
 
 namespace FC.Codeflix.Catalog.Domain.Validator;
 
@@ -14,5 +13,4 @@ public class CategoryValidator
         if (string.IsNullOrWhiteSpace(entity.Description))
             Errors.Add($"O campo {nameof(entity.Description)} não pode ser vazio");
     }
-    
 }

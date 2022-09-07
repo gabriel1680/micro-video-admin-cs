@@ -1,6 +1,6 @@
 using FC.Codeflix.Catalog.Domain.Kernel.ValueObject;
 
-namespace FC.Codeflix.Catalog.Domain.Kernel;
+namespace FC.Codeflix.Catalog.Domain.Kernel.Entity;
 
 public abstract class BaseEntity : IEntity
 {

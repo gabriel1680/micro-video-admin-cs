@@ -1,4 +1,5 @@
 using FC.Codeflix.Catalog.Domain.Kernel;
+using FC.Codeflix.Catalog.Domain.Kernel.Entity;
 using FC.Codeflix.Catalog.Domain.Kernel.ValueObject;
 
 namespace FC.Codeflix.Catalog.UnitTests.Domain.Kernel;
